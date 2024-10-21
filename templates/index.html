@@ -65,19 +65,19 @@
                     let profile = articles[i]['profile'];
                     let account = articles[i]['account'];
                     let temp_html = `
-            <div class="col-4">
-                <div class="card">
-                    <img src="${file}"class="card-img-top file-img" alt="...">
-                    <div class="card-body">
-                        <img src="${profile}"class="card-img-top profile-pic" alt="...">
-                        <h6 class="text-muted mt-2">${account}</h6>
-                        <h5 class="card-title">${title}</h5>
-                        <p class="card-text">${content}</p>
-                        <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
-                    </div>
-                </div>
+    <div class="col-12 col-sm-6 col-md-12 col-lg-4"> <!-- Menggunakan 1 kolom di semua ukuran -->
+        <div class="card"> <!-- Tambahkan wrapper card -->
+            <img src="${file}" class="card-img-top file-img" alt="...">
+            <div class="card-body">
+                <img src="${profile}" class="card-img-top profile-pic" alt="...">
+                <h6 class="text-muted mt-2">${account}</h6>
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">${content}</p>
+                <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
             </div>
-                    `;
+        </div>
+    </div>
+`;
                     $('#cards-box').append(temp_html);
                 }
             }
